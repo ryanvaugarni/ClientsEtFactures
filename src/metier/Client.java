@@ -56,7 +56,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return factures;
 	}
 	
 	/**
@@ -107,5 +107,6 @@ public class Client
 	
 	public void delete()
 	{
+		clients.remove(this);
 	}
 }
