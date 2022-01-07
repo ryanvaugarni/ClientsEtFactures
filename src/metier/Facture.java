@@ -6,9 +6,15 @@ public class Facture()
 {
 	private Client client;
 	private int montant;
-	private LocalDate datefacture = LocalDate.now();
-	private boolean estReglee;
-}
+	private boolean reglee = false;
+	private LocalDate date = LocaleDate.now;
+	
+	Facture(Cleint client, int montant)
+	{
+		this.montant = montant;
+		this.client = client;
+	}
+
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
@@ -36,7 +42,7 @@ public class Facture()
 	
 	public boolean estReglee()
 	{
-		return estReglee;
+		return reglee;
 	}
 
 	/**
@@ -46,7 +52,7 @@ public class Facture()
 	
 	public LocalDate getDate()
 	{
-		return datefacture;
+		return date;
 	}
 
 	/**

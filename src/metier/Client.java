@@ -5,10 +5,8 @@ import java.util.List;
 
 public class Client
 {
-	List<Object> Facture = new ArrayList<Object>();
-	List<Object> Client =new ArrayList<Object>();
-	private String nom;
-
+	private string nom;
+	private List
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -36,6 +34,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
@@ -46,7 +45,9 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		factures facture = new Facture(this, montant));
+		factures.add(facture);
+		return facture;
 	}
 	
 	/**
@@ -56,7 +57,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return new ArrayList<>(factures);
 	}
 	
 	/**
